@@ -7,15 +7,15 @@ from email.message import EmailMessage
 import logging
 
 # Define keywords to filter
-FILTER_KEYWORDS = ["phishing", "malware", "virus"]
+FILTER_KEYWORDS = ["update your account","login now","verify your identity","click here","free money"]
 
 # Paths
-INBOX_DIR = "/var/mail/inbox"
-QUARANTINE_DIR = "/var/mail/quarantine"
-LOG_FILE = "/var/log/email_security.log"
+INBOX_DIR = "/home/seed/Desktop/mail/inbox"
+QUARANTINE_DIR = "/home/seed/Desktop/mail/quarantine"
+LOG_FILE = "/home/seed/Desktop/mail/email_security.log"
 
 # Admin email for alerts
-ADMIN_EMAIL = "admin@example.com"
+ADMIN_EMAIL = "adminretail@egoogle.com"
 SMTP_SERVER = "localhost"
 
 # Logging configuration
