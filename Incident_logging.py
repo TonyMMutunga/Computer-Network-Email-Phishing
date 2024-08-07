@@ -1,6 +1,6 @@
 import logging
 
-LOG_FILE = "/var/log/email_security.log"
+LOG_FILE = "/home/seed/var/log/email_security.log"
 
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO, format='%(asctime)s - %(message)s')
 

@@ -7,15 +7,15 @@ from email.message import EmailMessage
 import logging
 
 # Define keywords to filter
-FILTER_KEYWORDS = ["update your account","login now","verify your identity","click here","free money"]
+FILTER_KEYWORDS = ["update your account", "click here", "create an account", "login now"]
 
 # Paths
-INBOX_DIR = "/home/seed/Desktop/mail/inbox"
-QUARANTINE_DIR = "/home/seed/Desktop/mail/quarantine"
-LOG_FILE = "/home/seed/Desktop/mail/email_security.log"
+INBOX_DIR = "/home/seed/var/mail/inbox"
+QUARANTINE_DIR = "/home/seed/var/mail/quarantine"
+LOG_FILE = "/home/seed/var/mail/email_security.log"
 
 # Admin email for alerts
-ADMIN_EMAIL = "adminretail@egoogle.com"
+ADMIN_EMAIL = "seed@localhost.com"
 SMTP_SERVER = "localhost"
 
 # Logging configuration
@@ -41,7 +41,7 @@ def send_alert(subject, body):
     msg = EmailMessage()
     msg.set_content(body)
     msg['Subject'] = subject
-    msg['From'] = "alert@example.com"
+    msg['From'] = "seed@localhost.com"
     msg['To'] = ADMIN_EMAIL
     with smtplib.SMTP(SMTP_SERVER) as server:
         server.send_message(msg)
@@ -56,5 +56,4 @@ def process_inbox():
         file_path = os.path.join(INBOX_DIR, filename)
         filter_email(file_path)
 
-if __name__ == "__main__":
-    process_inbox()
+

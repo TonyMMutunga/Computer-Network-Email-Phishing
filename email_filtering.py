@@ -4,11 +4,12 @@ import email
 from email.policy import default
 
 # Define keywords to filter
-FILTER_KEYWORDS = ["phishing", "malware", "virus"]
+FILTER_KEYWORDS = ["update your account", "login now", "click here", "create an account"]
 
 # Paths
-INBOX_DIR = "/var/mail/inbox"
-QUARANTINE_DIR = "/var/mail/quarantine"
+INBOX_DIR = "/home/seed/var/mail/inbox"
+QUARANTINE_DIR = "/home/seed/var/mail/quarantine"
+LOG_FILE = "/home/seed/var/mail/email_security.log"
 
 def filter_email(file_path):
     with open(file_path, 'r') as f:

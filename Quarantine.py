@@ -1,6 +1,6 @@
 import os
 
-QUARANTINE_DIR = "/var/mail/quarantine"
+QUARANTINE_DIR = "/home/seed/var/mail/quarantine"
 
 def list_quarantined_emails():
     return os.listdir(QUARANTINE_DIR)
